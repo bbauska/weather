@@ -27,9 +27,9 @@ async function weatherFn(cName) {
 function weatherShowFn(data) {
   $('#city-name').text(data.name);
   $('#date').text(moment().
-  format('MMMM Do YYYY, h:mm:ss a'));
+    format('MMMM Do YYYY, h:mm:ss a'));
   $('#temperature').
-  html(`${data.main.temp}°C`);
+    html(`${data.main.temp}°C`);
   $('#sea-level').
     html(`${data.main.sea_level}Ft`);
   $('#description').
@@ -38,6 +38,6 @@ function weatherShowFn(data) {
     html(`Wind Speed: ${data.wind.speed} m/s`);
   $('#weather-icon').
     attr('src',
-  `/images/favicon.png`);
+    `/images/apple-icon.png`);
   $('#weather-info').fadeIn();
 }
