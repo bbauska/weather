@@ -1,8 +1,8 @@
-<!-- script2.js -->
+<!-- script.js -->
 const url =
-	'https://api.openweathermap.org/data/2.5/weather';
+  'https://api.openweathermap.org/data/2.5/weather';
 const apiKey =
-	'f00c38e0279b7bc85480c3fe775d518c';
+  'be10825c60e33211d189ff5de79db2c8';
 
 $(document).ready(function () {
 	weatherFn('Startup');
@@ -30,6 +30,8 @@ function weatherShowFn(data) {
 		format('MMMM Do YYYY, h:mm:ss a'));
 	$('#temperature').
 		html(`${data.main.temp}°C`);
+	$('#sea-level').
+	    html(`${data.main.sea_level}Ft`);
 	$('#description').
 		text(data.weather[0].description);
 	$('#wind-speed').
