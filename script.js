@@ -38,6 +38,6 @@ function weatherShowFn(data) {
 		html(`Wind Speed: ${data.wind.speed} m/s`);
 	$('#weather-icon').
 		attr('src',
-			`/images/weather.png`);
+			`/images/favicon.png`);
 	$('#weather-info').fadeIn();
 }
