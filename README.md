@@ -1,2 +1,2 @@
-# weather2
-Weather 2 app.
+# weather
+Weather app from Geeks 4 Geeks.
