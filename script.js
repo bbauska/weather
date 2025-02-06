@@ -5,12 +5,13 @@ const apiKey =
   'be10825c60e33211d189ff5de79db2c8';
 
 $(document).ready(function () {
-weatherFn('Startup');
+  weatherFn('Startup');
 });
 
 async function weatherFn(cName) {
   const temp =
-    `${url}?q=${cName}&appid=${apiKey}&units=metric`;
+<!--    `${url}?q=${cName}&appid=${apiKey}&units=metric`;  -->
+    `${url}?q=${cName}&appid=${apiKey}&units=standard`;
     try {
       const res = await fetch(temp);
       const data = await res.json();
@@ -23,13 +24,17 @@ async function weatherFn(cName) {
       console.error('Error fetching weather data:', error);
     }
 }
+var celsius = weather.main.temp - 273.15;
+var fahrenheit = celsius * 1.8 + 32;
+var displayFahrenheit = fahrenheit.toFixed(0)
 
 function weatherShowFn(data) {
   $('#city-name').text(data.name);
   $('#date').text(moment().
     format('MMMM Do YYYY, h:mm:ss a'));
-  $('#temperature').
-    html(`${data.main.temp}°C`);
+<!--  $('#temperature').  -->
+<!--    html(`${data.main.temp}°C`);  -->
+  $('#temperature').html(Math.round((result.list[0].main.temp * (9/5)) - 459.67)+"°F");
   $('#description').
     text(data.weather[0].description);
   $('#wind-speed').
