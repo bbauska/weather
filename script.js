@@ -10,8 +10,7 @@ $(document).ready(function () {
 
 async function weatherFn(cName) {
   const temp =
-<!--    `${url}?q=${cName}&appid=${apiKey}&units=metric`;  -->
-    `${url}?q=${cName}&appid=${apiKey}&units=standard`;
+    `${url}?q=${cName}&appid=${apiKey}&units=metric`;
     try {
       const res = await fetch(temp);
       const data = await res.json();
