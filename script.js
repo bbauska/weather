@@ -24,9 +24,6 @@ async function weatherFn(cName) {
       console.error('Error fetching weather data:', error);
     }
 }
-var celsius = weather.main.temp - 273.15;
-var fahrenheit = celsius * 1.8 + 32;
-var displayFahrenheit = fahrenheit.toFixed(0)
 
 function weatherShowFn(data) {
   $('#city-name').text(data.name);
