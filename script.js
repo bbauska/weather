@@ -29,7 +29,7 @@ function weatherShowFn(data) {
   $('#date').text(moment().
     format('MMMM Do YYYY, h:mm:ss a'));
   $('#temperature').
-    html((`${data.main.temp}*1.8-32)°F`);
+    html(`${data.main.temp}°C`);
   $('#description').
     text(data.weather[0].description);
   $('#wind-speed').
