@@ -31,7 +31,7 @@ function weatherShowFn(data) {
   $('#city-name').text(data.name);
   $('#date').text(moment().
     format('MMMM Do YYYY, h:mm:ss a'));
-  $('#temperature').html(Math.round((data.main.temp * (9/5)) - 459.67)+"°F");
+  $('#temperature').html(Math.round(data.main.temp * (9/5))+"°F");
   $('#description').
     text(data.weather[0].description);
   $('#wind-speed').
